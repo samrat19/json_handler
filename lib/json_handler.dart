@@ -8,26 +8,30 @@ class JSONHandler {
 
   final data = 'API is not invoked';
 
-  Future getData(String url) async {
-    _response = await _dio.get(url);
-    try {
+  Future getData({String url}) async {
+    if(url == null){
+      return 'URL can not be null';
+    }else{
       _response = await _dio.get(url);
-      if (_response.statusCode == 200) {
-        return _response.data;
-      } else {
-        return 'error occurred';
+      try {
+        _response = await _dio.get(url);
+        if (_response.statusCode == 200) {
+          return _response.data;
+        } else {
+          return 'error occurred';
+        }
+      } catch (e) {
+        return 'unexpected error occurred';
       }
-    } catch (e) {
-      return 'unexpected error occurred';
     }
   }
 
-  Future postData(
-    String url, [
+  Future postData({
+    String url,
     Map postJSON,
     String authToken = '0',
     Map header,
-  ]) async {
+  }) async {
     try {
       if (authToken != '0') {
         _dio.options.headers['Authorization'] = authToken;
