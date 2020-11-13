@@ -17,4 +17,3 @@ A new Flutter package to reduce the chunks of code to fetch Response from an API
 ```
 
 
-

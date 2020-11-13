@@ -3,7 +3,6 @@ library json_handler;
 import 'package:dio/dio.dart';
 
 class JSONHandler {
-
   var _response = Response();
   final _dio = Dio();
 
@@ -23,9 +22,14 @@ class JSONHandler {
     }
   }
 
-  Future postData(String url, [Map postJSON , String authToken = '0', Map header,]) async{
+  Future postData(
+    String url, [
+    Map postJSON,
+    String authToken = '0',
+    Map header,
+  ]) async {
     try {
-      if(authToken != '0'){
+      if (authToken != '0') {
         _dio.options.headers['Authorization'] = authToken;
       }
       _response = await _dio.post(url, data: postJSON);
