@@ -1,3 +1,4 @@
 ## [0.0.1] - TODO: Add release date.
 
-* TODO: Describe initial release.
+* Testing some features to fetch API response
+  
