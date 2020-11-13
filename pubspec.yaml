@@ -1,8 +1,8 @@
 name: json_handler
 description: A new Flutter package.
 version: 0.0.1
-author:
-homepage:
+author: Atri Das
+homepage: https://github.com/samrat19/json_handler
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
