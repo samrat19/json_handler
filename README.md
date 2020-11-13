@@ -1,14 +1,17 @@
 # json_handler
 
-A new Flutter package.
+A new Flutter package to reduce the chunks of code to fetch Response from an API.
+
+*The package is under construction. Just live to test some features*
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+**Get data**
+```dart
+  var jsonHandler = JSONHandler();
+  var data = await jsonHandler.getData(demoUrl);
+  print(data);
+```
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+
+
