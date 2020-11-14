@@ -1,6 +1,6 @@
 name: json_handler
 description: A Flutter package to access any API response in a cleaer way
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/samrat19/json_handler
 
 environment:
