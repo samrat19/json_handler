@@ -12,7 +12,8 @@ A new Flutter package to reduce the chunks of code to fetch Response from an API
 **Get data**
 ```dart
   var jsonHandler = JSONHandler();
-  var data = await jsonHandler.getData(demoUrl);
+  var data = await jsonHandler.getData(
+    url: demoUrl, header: {'Accept': 'application/json'});
   print(data);
 ```
 
